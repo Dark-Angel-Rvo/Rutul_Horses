@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rutul Horse — благородные скакуны с высоких гор Рутула. Каталог лошадей, паспорта, характеристики и организация конных прогулок.">
+    <meta name="theme-color" content="#122616">
+    <title>Rutul Horse — Скакуны с высоких гор Рутула</title>
+
+    <!-- Фавикон скакуна с высокогорного Рутула -->
+    <link rel="icon" type="image/svg+xml" href="images/swg-horse.svg">
+
+    <!-- Google Fonts: благородная кириллическая антиква Playfair Display и современный гротеск Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Подключаем оптимизированный файл стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Шапка сайта с адаптивным мобильным меню -->
+<header class="header">
+    <a href="#main" class="logo">
+        <span class="logo-icon">
+            <img src="images/swg-horse.svg" alt="Rutul Horse" class="logo-img">
+        </span>
+        <span class="logo-text">Rutul Horse</span>
+    </a>
+
+    <!-- Чекбокс для мобильного бургер-меню без JS -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Открыть меню навигации">
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span class="hamburger"></span>
+    </label>
+
+    <nav class="navigation">
+        <a href="#main" class="nav-link">Главная</a>
+        <a href="#about" class="nav-link">О нас</a>
+        <a href="#features" class="nav-link">Особенности</a>
+        <a href="#horses" class="nav-link">Наши лошади</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+        <a href="#contacts" class="nav-btn-action">Забронировать</a>
+    </nav>
+</header>
+
+<main>
+    <!-- Главный экран (Hero) -->
+    <section id="main" class="site-section hero">
+        <div class="hero-badge">
+            <svg class="svg-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+            </svg>
+            <span>Высокогорный конный клуб • Дагестан</span>
+        </div>
+        <h1>Rutul Horse</h1>
+        <p>Благородные скакуны с высоких гор Рутула</p>
+        <div class="hero-actions">
+            <a href="#horses" class="hero-button hero-btn-primary">Смотреть лошадей</a>
+            <a href="#about" class="hero-button hero-btn-secondary">Узнать о породе</a>
+        </div>
+        <a href="#about" class="hero-scroll-indicator" aria-label="Прокрутить вниз">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </a>
+    </section>
+
+    <!-- Компактная бегущая лента доступных скакунов -->
+    <div class="horses-ticker-section">
+        <div class="ticker-header">
+            <span class="ticker-live-dot"></span>
+            <span class="ticker-title">Доступные скакуны Рутула:</span>
+        </div>
+        <div class="ticker-wrapper">
+            <div class="ticker-track">
+                <!-- Элемент 1 -->
+                <a href="#horse-1" class="ticker-card">
+                    <img src="images/horse-1.jpg" alt="Лошадь араб" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Лошадь араб</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">2 года • Гнедая • Шустрый, добрый • Выносливость 85%</span>
+                    </div>
+                </a>
+
+                <!-- Элемент 2 -->
+                <a href="#horse-2" class="ticker-card">
+                    <img src="images/horse-2.jpg" alt="Араб с вселенной" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Араб с вселенной</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">5 лет • Вороная • Сильный, вожак • Выносливость 98%</span>
+                    </div>
+                </a>
+
+                <!-- Элемент 3 -->
+                <a href="#horse-3" class="ticker-card">
+                    <img src="images/horse-3.jpg" alt="Абрек" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Абрек</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">4 года • Караковая • Послушный, спокойный • Выносливость 92%</span>
+                    </div>
+                </a>
+
+                <!-- Элемент 4 -->
+                <a href="#horse-4" class="ticker-card">
+                    <img src="images/horse-4.jpg" alt="Тарлан" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Тарлан</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">3 года • Рыжая • Чуткий, резвый • Выносливость 94%</span>
+                    </div>
+                </a>
+
+                <!-- Элемент 5 -->
+                <a href="#horse-5" class="ticker-card">
+                    <img src="images/horse-5.jpg" alt="Буран" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Буран</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">6 лет • Темно-гнедая • Храбрый, уверенный • Выносливость 99%</span>
+                    </div>
+                </a>
+
+                <!-- Элемент 6 -->
+                <a href="#horse-6" class="ticker-card">
+                    <img src="images/horse-6.jpg" alt="Алмаз" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Алмаз</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">4 года • Серая • Энергичный, статный • Выносливость 91%</span>
+                    </div>
+                </a>
+
+                <!-- Дубликаты для бесшовной бесконечной прокрутки -->
+                <a href="#horse-1" class="ticker-card" aria-hidden="true">
+                    <img src="images/horse-1.jpg" alt="Лошадь араб" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Лошадь араб</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">2 года • Гнедая • Шустрый, добрый • Выносливость 85%</span>
+                    </div>
+                </a>
+
+                <a href="#horse-2" class="ticker-card" aria-hidden="true">
+                    <img src="images/horse-2.jpg" alt="Араб с вселенной" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Араб с вселенной</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">5 лет • Вороная • Сильный, вожак • Выносливость 98%</span>
+                    </div>
+                </a>
+
+                <a href="#horse-3" class="ticker-card" aria-hidden="true">
+                    <img src="images/horse-3.jpg" alt="Абрек" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Абрек</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">4 года • Караковая • Послушный, спокойный • Выносливость 92%</span>
+                    </div>
+                </a>
+
+                <a href="#horse-4" class="ticker-card" aria-hidden="true">
+                    <img src="images/horse-4.jpg" alt="Тарлан" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Тарлан</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">3 года • Рыжая • Чуткий, резвый • Выносливость 94%</span>
+                    </div>
+                </a>
+
+                <a href="#horse-5" class="ticker-card" aria-hidden="true">
+                    <img src="images/horse-5.jpg" alt="Буран" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Буран</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">6 лет • Темно-гнедая • Храбрый, уверенный • Выносливость 99%</span>
+                    </div>
+                </a>
+
+                <a href="#horse-6" class="ticker-card" aria-hidden="true">
+                    <img src="images/horse-6.jpg" alt="Алмаз" class="ticker-thumb" loading="lazy">
+                    <div class="ticker-info">
+                        <div class="ticker-name-row">
+                            <span class="ticker-name">Алмаз</span>
+                            <span class="ticker-status">Доступен</span>
+                        </div>
+                        <span class="ticker-summary">4 года • Серая • Энергичный, статный • Выносливость 91%</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Секция "О нас" с презентационными метриками -->
+    <section id="about" class="site-section about">
+        <div class="about-container">
+            <div class="about-text">
+                <span class="section-tag">О проекте</span>
+                <h2>О нас</h2>
+                <div class="quote-card">
+                    <p>
+                        <strong>Rutul Horse</strong> — это проект, посвященный благородным скакунам, выращенным на высокогорных лугах Рутульского района.
+                        Здесь мы собрали подробную информацию о наших лошадях, их характере, родословной и физических способностях.
+                    </p>
+                    <p>
+                        Каждая лошадь обладает уникальным темпераментом и особой связью с наездником. В разделе «Наши лошади» вы можете ознакомиться с интерактивным паспортом каждого скакуна.
+                    </p>
+                </div>
+
+                <!-- Презентационные показатели -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num">2 000+ м</span>
+                        <span class="stat-desc">Высота пастбищ над уровнем моря</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-desc">Горная закалка и чистое воспитание</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num">6</span>
+                        <span class="stat-desc">Элитных скакунов в действующем составе</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image-wrapper">
+                <img src="images/backgroound-horse-1.jpg" alt="Лошадь в горах Рутула" class="about-img" loading="lazy">
+                <div class="about-img-badge">
+                    <svg class="svg-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                        <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+                    </svg>
+                    <span>Сердце Рутула</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция ключевых особенностей (Презентационный блок) -->
+    <section id="features" class="site-section features-section">
+        <div class="features-header">
+            <span class="section-tag">Преимущества</span>
+            <h2>Особенности рутульских скакунов</h2>
+            <p class="features-subtext">Вековые традиции разведения и уникальная природа высокогорья сформировали непревзойденные качества наших лошадей</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg class="svg-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" aria-hidden="true">
+                        <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+                    </svg>
+                </div>
+                <h3>Горная выносливость</h3>
+                <p>Лошади адаптированы к разреженному горному воздуху и крутым каменистым подъемам, преодолевая любые перевалы.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg class="svg-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" aria-hidden="true">
+                        <path d="M12 2l2.4 7.2h7.6l-6.2 4.5 2.4 7.3-6.2-4.5-6.2 4.5 2.4-7.3-6.2-4.5h7.6z"/>
+                    </svg>
+                </div>
+                <h3>Покладистый нрав</h3>
+                <p>Высокий интеллект, спокойствие и дружелюбие к наездникам любого уровня подготовки — от новичков до опытных всадников.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg class="svg-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" aria-hidden="true">
+                        <path d="M11 20A7 7 0 0 1 4 13C4 7.5 9 3 19 3c.5 10-4 15-9.5 17Z"/>
+                        <path d="M12 12c-3 1.5-5 4-5 8"/>
+                    </svg>
+                </div>
+                <h3>Экологичный уход</h3>
+                <p>Круглогодичный выпас на альпийских разнотравьях, кристальная родниковая вода и заботливое индивидуальное отношение.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg class="svg-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32" aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <path d="m9 12 2 2 4-4"/>
+                    </svg>
+                </div>
+                <h3>Абсолютная надежность</h3>
+                <p>Точный шаг и природная координация обеспечивают максимальную безопасность даже на самых сложных горных тропах.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог лошадей с 3D карточками -->
+    <section id="horses" class="site-section">
+        <span class="section-tag">Каталог</span>
+        <h2>Наши лошади</h2>
+        <div class="horses-subtitle">
+            <p>Скакуны с самого горного <strong><em>Рутула!</em></strong> (нажмите на карточку или кнопку «Подробнее», чтобы открыть паспорт)</p>
+        </div>
+
+        <div class="horses-list">
+            <!-- Карточка 1 -->
+            <div class="horse-card-wrapper">
+                <input type="checkbox" id="horse-1" class="horse-card-toggle">
+                <div class="horse-card">
+                    <!-- Лицевая сторона -->
+                    <div class="horse-card-side horse-card-front">
+                        <label for="horse-1" class="horse-img-container">
+                            <img src="images/horse-1.jpg" alt="Лошадь араб" loading="lazy">
+                            <span class="horse-badge">Арабская порода</span>
+                            <span class="card-hint-badge">Нажмите для паспорта</span>
+                        </label>
+                        <div class="horse-card-content">
+                            <h3>Лошадь араб</h3>
+                            <p>Двухлетний, худоват, шустрый, добрый</p>
+                            <label for="horse-1" class="horse-btn-flip">
+                                <span>Подробнее</span>
+                                <span class="flip-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                                        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                                        <path d="M3 3v5h5"/>
+                                        <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                                        <path d="M16 16h5v5"/>
+                                    </svg>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Обратная сторона с подробной информацией -->
+                    <div class="horse-card-side horse-card-back">
+                        <div class="horse-back-header">
+                            <h3>Лошадь араб</h3>
+                            <span class="horse-badge-sub">Паспорт скакуна</span>
+                        </div>
+                        <div class="horse-info-list">
+                            <div class="horse-info-item">
+                                <span class="info-label">Возраст:</span>
+                                <span class="info-value">2 года</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Масть:</span>
+                                <span class="info-value">Гнедая</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Темперамент:</span>
+                                <span class="info-value">Шустрый, добрый</span>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Выносливость</span>
+                                    <span class="stat-percent">85%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Скорость</span>
+                                    <span class="stat-percent">90%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 90%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="horse-bio">
+                            <p>Молодой и полный энергии жеребец с высокогорных лугов Рутула. Отличается дружелюбием и послушанием.</p>
+                        </div>
+                        <label for="horse-1" class="horse-btn-flip horse-btn-back">
+                            <span>← Назад к фото</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="horse-card-wrapper">
+                <input type="checkbox" id="horse-2" class="horse-card-toggle">
+                <div class="horse-card">
+                    <!-- Лицевая сторона -->
+                    <div class="horse-card-side horse-card-front">
+                        <label for="horse-2" class="horse-img-container">
+                            <img src="images/horse-2.jpg" alt="Араб с вселенной" loading="lazy">
+                            <span class="horse-badge">Горный скакун</span>
+                            <span class="card-hint-badge">Нажмите для паспорта</span>
+                        </label>
+                        <div class="horse-card-content">
+                            <h3>Араб с вселенной</h3>
+                            <p>Пятилетний, сильный, очень быстрый, умный</p>
+                            <label for="horse-2" class="horse-btn-flip">
+                                <span>Подробнее</span>
+                                <span class="flip-icon">
+                                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                                                                        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                                                                        <path d="M3 3v5h5"/>
+                                                                        <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                                                                        <path d="M16 16h5v5"/>
+                                                                    </svg>
+                                                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Обратная сторона с подробной информацией -->
+                    <div class="horse-card-side horse-card-back">
+                        <div class="horse-back-header">
+                            <h3>Араб с вселенной</h3>
+                            <span class="horse-badge-sub">Паспорт скакуна</span>
+                        </div>
+                        <div class="horse-info-list">
+                            <div class="horse-info-item">
+                                <span class="info-label">Возраст:</span>
+                                <span class="info-value">5 лет</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Масть:</span>
+                                <span class="info-value">Вороная</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Темперамент:</span>
+                                <span class="info-value">Умный, послушный, сильный</span>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Выносливость</span>
+                                    <span class="stat-percent">98%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 98%;"></div></div>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Скорость</span>
+                                    <span class="stat-percent">96%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 96%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="horse-bio">
+                            <p>Опытный и невероятно мощный вожак. С легкостью преодолевает крутые горные перевалы и каменистые тропы.</p>
+                        </div>
+                        <label for="horse-2" class="horse-btn-flip horse-btn-back">
+                            <span>← Назад к фото</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="horse-card-wrapper">
+                <input type="checkbox" id="horse-3" class="horse-card-toggle">
+                <div class="horse-card">
+                    <!-- Лицевая сторона -->
+                    <div class="horse-card-side horse-card-front">
+                        <label for="horse-3" class="horse-img-container">
+                            <img src="images/horse-3.jpg" alt="Абрек" loading="lazy">
+                            <span class="horse-badge">Рутульский крепыш</span>
+                            <span class="card-hint-badge">Нажмите для паспорта</span>
+                        </label>
+                        <div class="horse-card-content">
+                            <h3>Абрек</h3>
+                            <p>Четырехлетний, среднего телосложения, послушный</p>
+                            <label for="horse-3" class="horse-btn-flip">
+                                <span>Подробнее</span>
+                                <span class="flip-icon">
+                                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                                                                        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                                                                        <path d="M3 3v5h5"/>
+                                                                        <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                                                                        <path d="M16 16h5v5"/>
+                                                                    </svg>
+                                                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Обратная сторона с подробной информацией -->
+                    <div class="horse-card-side horse-card-back">
+                        <div class="horse-back-header">
+                            <h3>Абрек</h3>
+                            <span class="horse-badge-sub">Паспорт скакуна</span>
+                        </div>
+                        <div class="horse-info-list">
+                            <div class="horse-info-item">
+                                <span class="info-label">Возраст:</span>
+                                <span class="info-value">4 года</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Масть:</span>
+                                <span class="info-value">Караковая</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Темперамент:</span>
+                                <span class="info-value">Спокойный, прожорлив</span>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Выносливость</span>
+                                    <span class="stat-percent">92%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 92%;"></div></div>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Скорость</span>
+                                    <span class="stat-percent">82%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 82%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="horse-bio">
+                            <p>Спокойный и надежный конь для долгих прогулок. Очень послушен, обожает свежее сено и яблоки.</p>
+                        </div>
+                        <label for="horse-3" class="horse-btn-flip horse-btn-back">
+                            <span>← Назад к фото</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 4 -->
+            <div class="horse-card-wrapper">
+                <input type="checkbox" id="horse-4" class="horse-card-toggle">
+                <div class="horse-card">
+                    <!-- Лицевая сторона -->
+                    <div class="horse-card-side horse-card-front">
+                        <label for="horse-4" class="horse-img-container">
+                            <img src="images/horse-4.jpg" alt="Тарлан" loading="lazy">
+                            <span class="horse-badge">Кавказская верховая</span>
+                            <span class="card-hint-badge">Нажмите для паспорта</span>
+                        </label>
+                        <div class="horse-card-content">
+                            <h3>Тарлан</h3>
+                            <p>Трехлетний, статный, неутомимый и резвый</p>
+                            <label for="horse-4" class="horse-btn-flip">
+                                <span>Подробнее</span>
+                                <span class="flip-icon">
+                                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                                                                        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                                                                        <path d="M3 3v5h5"/>
+                                                                        <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                                                                        <path d="M16 16h5v5"/>
+                                                                    </svg>
+                                                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Обратная сторона с подробной информацией -->
+                    <div class="horse-card-side horse-card-back">
+                        <div class="horse-back-header">
+                            <h3>Тарлан</h3>
+                            <span class="horse-badge-sub">Паспорт скакуна</span>
+                        </div>
+                        <div class="horse-info-list">
+                            <div class="horse-info-item">
+                                <span class="info-label">Возраст:</span>
+                                <span class="info-value">3 года</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Масть:</span>
+                                <span class="info-value">Рыжая</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Темперамент:</span>
+                                <span class="info-value">Чуткий, резвый, добрый</span>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Выносливость</span>
+                                    <span class="stat-percent">94%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 94%;"></div></div>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Скорость</span>
+                                    <span class="stat-percent">92%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 92%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="horse-bio">
+                            <p>Рожденный на альпийских пастбищах, Тарлан обладает исключительным чутьем на горные тропы и мягким легким шагом.</p>
+                        </div>
+                        <label for="horse-4" class="horse-btn-flip horse-btn-back">
+                            <span>← Назад к фото</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 5 -->
+            <div class="horse-card-wrapper">
+                <input type="checkbox" id="horse-5" class="horse-card-toggle">
+                <div class="horse-card">
+                    <!-- Лицевая сторона -->
+                    <div class="horse-card-side horse-card-front">
+                        <label for="horse-5" class="horse-img-container">
+                            <img src="images/horse-5.jpg" alt="Буран" loading="lazy">
+                            <span class="horse-badge">Горная кабардинская</span>
+                            <span class="card-hint-badge">Нажмите для паспорта</span>
+                        </label>
+                        <div class="horse-card-content">
+                            <h3>Буран</h3>
+                            <p>Шестилетний, богатырской силы, бесстрашный</p>
+                            <label for="horse-5" class="horse-btn-flip">
+                                <span>Подробнее</span>
+                                <span class="flip-icon">
+                                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                                                                        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                                                                        <path d="M3 3v5h5"/>
+                                                                        <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                                                                        <path d="M16 16h5v5"/>
+                                                                    </svg>
+                                                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Обратная сторона с подробной информацией -->
+                    <div class="horse-card-side horse-card-back">
+                        <div class="horse-back-header">
+                            <h3>Буран</h3>
+                            <span class="horse-badge-sub">Паспорт скакуна</span>
+                        </div>
+                        <div class="horse-info-list">
+                            <div class="horse-info-item">
+                                <span class="info-label">Возраст:</span>
+                                <span class="info-value">6 лет</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Масть:</span>
+                                <span class="info-value">Темно-гнедая</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Темперамент:</span>
+                                <span class="info-value">Храбрый, уверенный</span>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Выносливость</span>
+                                    <span class="stat-percent">99%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 99%;"></div></div>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Скорость</span>
+                                    <span class="stat-percent">88%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 88%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="horse-bio">
+                            <p>Закаленный суровыми рутульскими ветрами богатырский конь. Превосходно держит равновесие на самых узких каменистых хребтах.</p>
+                        </div>
+                        <label for="horse-5" class="horse-btn-flip horse-btn-back">
+                            <span>← Назад к фото</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 6 -->
+            <div class="horse-card-wrapper">
+                <input type="checkbox" id="horse-6" class="horse-card-toggle">
+                <div class="horse-card">
+                    <!-- Лицевая сторона -->
+                    <div class="horse-card-side horse-card-front">
+                        <label for="horse-6" class="horse-img-container">
+                            <img src="images/horse-6.jpg" alt="Алмаз" loading="lazy">
+                            <span class="horse-badge">Карачаевская порода</span>
+                            <span class="card-hint-badge">Нажмите для паспорта</span>
+                        </label>
+                        <div class="horse-card-content">
+                            <h3>Алмаз</h3>
+                            <p>Четырехлетний, грациозный, быстрый, статный</p>
+                            <label for="horse-6" class="horse-btn-flip">
+                                <span>Подробнее</span>
+                                <span class="flip-icon">
+                                                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                                                                        <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+                                                                        <path d="M3 3v5h5"/>
+                                                                        <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
+                                                                        <path d="M16 16h5v5"/>
+                                                                    </svg>
+                                                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Обратная сторона с подробной информацией -->
+                    <div class="horse-card-side horse-card-back">
+                        <div class="horse-back-header">
+                            <h3>Алмаз</h3>
+                            <span class="horse-badge-sub">Паспорт скакуна</span>
+                        </div>
+                        <div class="horse-info-list">
+                            <div class="horse-info-item">
+                                <span class="info-label">Возраст:</span>
+                                <span class="info-value">4 года</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Масть:</span>
+                                <span class="info-value">Серая</span>
+                            </div>
+                            <div class="horse-info-item">
+                                <span class="info-label">Темперамент:</span>
+                                <span class="info-value">Энергичный, преданный</span>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Выносливость</span>
+                                    <span class="stat-percent">91%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 91%;"></div></div>
+                            </div>
+                            <div class="horse-info-item stat-item">
+                                <div class="stat-header">
+                                    <span class="info-label">Скорость</span>
+                                    <span class="stat-percent">95%</span>
+                                </div>
+                                <div class="stat-bar"><div class="stat-progress" style="width: 95%;"></div></div>
+                            </div>
+                        </div>
+                        <div class="horse-bio">
+                            <p>Великолепный скакун с горделивой осанкой и мягким аллюром. Идеален для динамичных прогулок по горным долинам.</p>
+                        </div>
+                        <label for="horse-6" class="horse-btn-flip horse-btn-back">
+                            <span>← Назад к фото</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Секция Контакты с интерактивными карточками -->
+    <section id="contacts" class="site-section contacts">
+        <div class="contacts-content">
+            <span class="section-tag section-tag-light">Связь</span>
+            <h2>Связаться с нами</h2>
+            <div class="contacts-quote">
+                <p>Хотите узнать больше о наших лошадях или забронировать конную прогулку по горным перевалам Рутула? Напишите нам или позвоните напрямую.</p>
+            </div>
+
+            <!-- Презентационные контактные карточки -->
+            <div class="contacts-cards-grid">
+                <div class="contact-info-card">
+                    <span class="contact-card-icon">
+                        <svg class="svg-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </span>
+                    <h4>Локация</h4>
+                    <p>Республика Дагестан, Рутульский район, с. Рутул</p>
+                </div>
+                <div class="contact-info-card">
+                    <span class="contact-card-icon">
+                        <svg class="svg-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </span>
+                    <h4>Режим работы</h4>
+                    <p>Ежедневно: с 08:00 до 20:00 (по предзаписи)</p>
+                </div>
+                <div class="contact-info-card">
+                    <span class="contact-card-icon">
+                        <svg class="svg-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28" aria-hidden="true">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </span>
+                    <h4>Быстрая связь</h4>
+                    <p>WhatsApp, Telegram, звонки и почта (24/7)</p>
+                </div>
+            </div>
+
+            <!-- Сноска с интерактивной картой с местом Рутула -->
+            <div class="contacts-map-section">
+                <div class="map-card">
+                    <div class="map-card-header">
+                        <div class="map-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                                <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+                                <line x1="9" y1="3" x2="9" y2="18"></line>
+                                <line x1="15" y1="6" x2="15" y2="21"></line>
+                            </svg>
+                            <span>Локация на карте</span>
+                        </div>
+                        <h3>Интерактивная карта — село Рутул</h3>
+                        <p>Наш высокогорный питомник и база конных туров в Рутульском районе Дагестана</p>
+                    </div>
+                    <div class="map-embed-wrapper">
+                        <iframe
+                            title="Интерактивная карта села Рутул, Дагестан"
+                            src="https://yandex.ru/map-widget/v1/?ll=47.4244%2C41.5361&z=13&pt=47.4244%2C41.5361%2Cpm2rdm"
+                            width="100%"
+                            height="340"
+                            style="border:0;"
+                            allowfullscreen="true">
+                        </iframe>
+                    </div>
+                    <div class="map-card-footer">
+                        <span class="map-footnote">
+                            <svg class="svg-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>с. Рутул, Республика Дагестан, Высота ~2 000 м над уровнем моря</span>
+                        </span>
+                        <div class="map-links-group">
+                            <a href="https://yandex.ru/maps/?ll=47.4244%2C41.5361&z=13&pt=47.4244%2C41.5361%2Cpm2rdm" target="_blank" rel="noopener noreferrer" class="map-direct-link">
+                                <span>Яндекс Карты</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.google.com/maps/place/%D0%A0%D1%83%D1%82%D1%83%D0%BB,+%D0%A0%D0%B5%D1%81%D0%BF.+%D0%94%D0%B0%D0%B3%D0%B5%D1%81%D1%82%D0%B0%D0%BD/@41.5360981,47.3871466,13z" target="_blank" rel="noopener noreferrer" class="map-direct-link">
+                                <span>Google Maps</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-buttons-group">
+                <a href="https://wa.me/79990000000" target="_blank" rel="noopener noreferrer" class="contact-button contact-btn-wa">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.04 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.04 3.67M9.53 7.33C9.33 7.33 9 7.4 8.73 7.69C8.46 7.98 7.7 8.7 7.7 10.15C7.7 11.6 8.76 13 8.91 13.2C9.06 13.4 11 16.38 13.92 17.64C14.61 17.94 15.15 18.12 15.57 18.25C16.27 18.47 16.9 18.44 17.4 18.37C17.96 18.29 19.12 17.67 19.36 17C19.6 16.33 19.6 15.75 19.53 15.63C19.46 15.5 19.26 15.43 18.96 15.28C18.66 15.13 17.18 14.4 16.9 14.3C16.63 14.2 16.43 14.15 16.23 14.45C16.03 14.75 15.46 15.43 15.28 15.63C15.11 15.83 14.93 15.85 14.63 15.7C14.33 15.55 13.37 15.24 12.23 14.22C11.35 13.43 10.75 12.45 10.58 12.16C10.41 11.86 10.56 11.7 10.71 11.56C10.85 11.42 11.02 11.2 11.17 11.03C11.32 10.85 11.37 10.73 11.47 10.53C11.57 10.33 11.52 10.15 11.45 10.01C11.37 9.86 10.77 8.39 10.53 7.8C10.29 7.23 10.05 7.31 9.87 7.3C9.7 7.3 9.5 7.33 9.53 7.33Z"/>
+                    </svg>
+                    <span>Написать в WhatsApp</span>
+                </a>
+                <a href="https://t.me/rutulhorse" target="_blank" rel="noopener noreferrer" class="contact-button contact-btn-tg">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+                    </svg>
+                    <span>Написать в Telegram</span>
+                </a>
+                <a href="mailto:rutulhorse@mail.ru" class="contact-button contact-btn-main">
+                    <svg class="svg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                        <rect width="20" height="16" x="2" y="4" rx="2"/>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                    </svg>
+                    <span>Написать на почту</span>
+                </a>
+                <a href="tel:+79990000000" class="contact-button contact-btn-secondary">
+                    <svg class="svg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>Позвонить нам</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Презентационный Футер -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo">
+                <span class="logo-icon">
+                    <img src="images/swg-horse.svg" alt="Rutul Horse" class="logo-img">
+                </span>
+                <span class="logo-text">Rutul Horse</span>
+            </div>
+            <p class="footer-tagline">Горный конный клуб и питомник благородных скакунов в сердце Дагестана.</p>
+        </div>
+
+        <div class="footer-links-group">
+            <h4>Навигация</h4>
+            <ul class="footer-nav">
+                <li><a href="#main">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#features">Особенности</a></li>
+                <li><a href="#horses">Наши лошади</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-extra">
+            <h4>Конные туры</h4>
+            <p>Прогулки по альпийским лугам, фотосессии и аренда скакунов.</p>
+            <a href="#main" class="back-to-top-btn" title="Вернуться в начало">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+                <span>Наверх</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Rutul Horse. Все права защищены. Высокогорный Рутул.</p>
+    </div>
+</footer>
+
+<script>
+    // Автоматическое плавное закрытие мобильной шторки меню при выборе раздела
+    document.addEventListener('DOMContentLoaded', function () {
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.querySelectorAll('.navigation .nav-link, .navigation .nav-btn-action');
+        navLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                if (navToggle && navToggle.checked) {
+                    navToggle.checked = false;
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
